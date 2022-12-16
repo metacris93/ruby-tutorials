@@ -27,7 +27,7 @@ letras[-2] #t
 letras[100] #nil
 letras.include? "q"
 
-#funcion Lambda
+# funcion Lambda
 letras.count {|x| x == "q"}
 
 numbers = [1,2,3,4,5,6,7,8,9]
@@ -37,4 +37,5 @@ p numbers.sum
 nombre = "Cristian Pisco Intriago"
 p nombre.split(" ")
 p nombre.split(" ").size
-p nombre.split(" ").map {|x| x.upcase}
+p nombre.split(' ').map {|x| x.upcase}
+p letras.shuffle
