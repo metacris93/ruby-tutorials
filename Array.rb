@@ -39,3 +39,29 @@ p nombre.split(" ")
 p nombre.split(" ").size
 p nombre.split(' ').map {|x| x.upcase}
 p letras.shuffle
+
+p letras.last
+x = 1..5 # incluye el 5
+p x.to_a
+y = (1...5).to_a # no incluye el 5
+p y
+p y.unshift(100)
+p y.shift(1)
+p y.uniq! # remueve los duplicados
+p y.push(9)
+p y.join # convierte el arreglo en string
+p y.join('-') # convierte el arreglo en string
+p %w(my name is Cristian Pisco, ruby is amazing)
+
+for i in x
+    print i
+end
+puts
+x.each do |i|
+    print i
+end
+puts
+x.each { |i| print i }
+z = (1..100).to_a.shuffle
+puts
+p z.select { |number| number.odd? }

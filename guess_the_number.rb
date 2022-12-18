@@ -43,18 +43,18 @@ class App
         rnd.set_random_number
         is_guesssed = false
 
-        while (!is_guesssed && @counter < @tries)
-            print("Guess the number: ")
+        until @counter >= @tries || is_guesssed
+            print("Make a guess: ")
             guess_number = gets.chomp.to_i
             is_guesssed = rnd.is_guessed(guess_number)
             if (is_guesssed)
                 puts("YIKES...")
             else
                 @counter+=1
-                puts("You have #{@counter} tries")
+                puts("You've got #{@counter} guesses left")
             end
             if (@counter >= @tries)
-                puts("Sorry... Try again")
+                puts("Sorry... You didn't get my number. (It was #{rnd.number})")
             end
         end
     end
